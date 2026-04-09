@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { getFallbackRoadmap } from "@/lib/roadmap-fallbacks";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || "",
 });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
